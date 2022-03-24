@@ -1,0 +1,60 @@
+### GET ALL PETS
+GET http://localhost:3000/pet HTTP/1.1
+
+### GET SINGLE PET
+GET http://localhost:3000/pet/15 HTTP/1.1
+
+
+### ADD PET SIMPLE
+POST http://localhost:3000/pet HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Rudy",
+    "category": 
+    {
+    "name": "Dogs"
+    },
+    "status": "available"
+}
+
+### ADD PET WITH PHOTOS
+POST http://localhost:3000/pet HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "draxler",
+    "category": 
+    {
+    "name": "Dogs"
+    },
+    "photoUrls": ["draxler-close-up.png"],
+    "status": "available"
+}
+
+### ADD PET WITH PHOTOS AND TAGS
+POST http://localhost:3000/pet HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "draxler",
+    "category": 
+    {
+    "name": "Dogs"
+    },
+    "photoUrls": ["draxler-close-up.png"],
+     "tags": [ "tag1", "tag2"],
+    "status": "available"
+}
+
+
+### DELETE SINGLE ITEM
+DELETE http://localhost:3000/pet/13 HTTP/1.1
+
+### UPDATE ITEM
+PUT http://localhost:3000/pet/10 HTTP/1.1
+Content-Type: application/json
+
+{
+    "status": "sold"
+}
